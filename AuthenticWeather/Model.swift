@@ -24,7 +24,7 @@ class WeatherModel {
         Text = condition["text"] as? String ?? ""
         }
         else {
-            error = "invalid location"
+            error = "Enter Fucking Correct Location!"
         }
     
     

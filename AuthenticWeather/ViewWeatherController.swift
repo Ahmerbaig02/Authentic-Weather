@@ -10,9 +10,33 @@ import UIKit
 
 class ViewWeatherController: UIViewController {
 
+    @IBOutlet var weatherImgView: UIImageView!
+    @IBOutlet var temperatureLbl: UILabel!
     @IBOutlet var weatherLbl: UILabel!
     @IBOutlet var LoaderImgView: UIImageView!
     var locationStr:String!
+    
+    var weatherDict:[String:String] = ["Rainy":"It's Fucking Raining",
+        "Stormy":"Fucking Thunder Storms",
+        "Sunny":"Let's get Fucking Fried",
+        "Cloudy":"Fucking Clouds Everywhere",
+        "Mostly Cloudy":"Fucking Clouds Everywhere",
+        "Hot":"It's so Fucking Hot",
+        "Cold":"It's Fucking Cold",
+        "Dry":"Give me some Fucking Water",
+        "Wet":"Not to fucking bad today",
+        "Windy":"Breezy. Fucking Breezy",
+        "Hurricanes":"The Hurricane is coming - may the force be with you",
+        "Sand-storms":"The storm is coming - may the force be with you",
+        "Snow-storms":"The storm is coming - may the force be with you",
+        "Humid":"Not to fucking bad today",
+        "Foggy":"Fucking can't see anything",
+        "Snow":"Numb fucking fingers. Can't feel my fucking fingers any more",
+        "Thundersnow":"t's Ducking Freezing (oh damnit, you fucking autocorrect)",
+        "Hail":"It's Fucking Hailing Today",
+        "blizzard":"Fucking, My ass is Freezing",
+        "Mist":"It's Fucking Eye Blind Mist"]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +72,12 @@ class ViewWeatherController: UIViewController {
                         print(jsonDict) //original json data
                         let model:WeatherModel = WeatherModel(data: jsonDict)
                         if model.error == nil {
-                            self.weatherLbl.text = "Temperature: \(model.Temp!)ºF \nText: \(model.Text!)"
+                            if (self.weatherDict.index(forKey: model.Text) == nil){
+                                self.weatherDict[model.Text] = "It's Fucking "+model.Text
+                            }
+                            self.weatherImgView.image = #imageLiteral(resourceName: "Cloud")
+                            self.weatherLbl.text = self.weatherDict[model.Text]!.replacingOccurrences(of: " ", with: "\n")
+                            self.temperatureLbl.text = model.Temp+"º F"
                         } else{
                             self.weatherLbl.text = model.error
                         }
@@ -64,6 +93,14 @@ class ViewWeatherController: UIViewController {
         }.resume()
         
         
+    }
+    
+    @IBAction func backBtnAction(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    deinit {
+        print("deinitialized view weather")
     }
 
 }

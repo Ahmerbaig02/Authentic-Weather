@@ -18,8 +18,6 @@
 		87141B2B205FB12E00191D60 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87141B2A205FB12E00191D60 /* Model.swift */; };
 		87141B2D205FCF5200191D60 /* GIFImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87141B2C205FCF5200191D60 /* GIFImageView.swift */; };
 		87141B2F205FD2E100191D60 /* Weather.gif in Resources */ = {isa = PBXBuildFile; fileRef = 87141B2E205FD2E100191D60 /* Weather.gif */; };
-		87141B31205FDB0200191D60 /* imgweather.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 87141B30205FDB0200191D60 /* imgweather.jpg */; };
-		87141B33205FDE6400191D60 /* WeatherImg.png in Resources */ = {isa = PBXBuildFile; fileRef = 87141B32205FDE6400191D60 /* WeatherImg.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +55,6 @@
 		87141B2A205FB12E00191D60 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		87141B2C205FCF5200191D60 /* GIFImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFImageView.swift; sourceTree = "<group>"; };
 		87141B2E205FD2E100191D60 /* Weather.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Weather.gif; sourceTree = "<group>"; };
-		87141B30205FDB0200191D60 /* imgweather.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = imgweather.jpg; sourceTree = "<group>"; };
-		87141B32205FDE6400191D60 /* WeatherImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WeatherImg.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				87141B2E205FD2E100191D60 /* Weather.gif */,
-				87141B32205FDE6400191D60 /* WeatherImg.png */,
-				87141B30205FDB0200191D60 /* imgweather.jpg */,
 				2ED8753E205EB7880099AB37 /* AppDelegate.swift */,
 				2ED87540205EB7880099AB37 /* ViewController.swift */,
 				2ED87570205EC2D60099AB37 /* ViewWeatherController.swift */,
@@ -250,12 +244,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87141B33205FDE6400191D60 /* WeatherImg.png in Resources */,
 				2ED87549205EB7880099AB37 /* LaunchScreen.storyboard in Resources */,
 				2ED87546205EB7880099AB37 /* Assets.xcassets in Resources */,
 				2ED87544205EB7880099AB37 /* Main.storyboard in Resources */,
 				87141B2F205FD2E100191D60 /* Weather.gif in Resources */,
-				87141B31205FDB0200191D60 /* imgweather.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
